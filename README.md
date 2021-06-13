@@ -1,9 +1,11 @@
-# node-container-template
+# next-nest-app-example
 
-Template of vscode remote development container with Node.js
+Next.js + Nest.js + yarn v2 のモノレポ  
+Eslint の設定がうまくできてない
 
-# Install dependencies
+# How to get started
 
 ```
-yarn install --frozen-lockfile
+yarn install --immutable
+yarn dev
 ```

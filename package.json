@@ -1,5 +1,5 @@
 {
-  "name": "project-name",
+  "name": "next-nest-app-example",
   "version": "0.0.1",
   "private": true,
   "workspaces": {
@@ -14,20 +14,25 @@
     ]
   },
   "scripts": {
-    "lint": "eslint src",
+    "lint": "eslint . --resolve-plugins-relative-to . --ext .jsx,.js,.tsx,.ts",
+    "cl:lint": "eslint --resolve-plugins-relative-to . --ext .jsx,.js,.tsx,.ts ./src/client",
+    "sr:lint": "eslint --resolve-plugins-relative-to . --ext .jsx.js,.tsx,.ts ./src/server",
+    "type-check": "tsc",
     "dev": "yarn workspaces foreach -ip run dev",
     "cl:dev": "yarn workspace client dev",
     "sr:dev": "yarn workspace server dev"
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^14.14.41",
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
-    "eslint": "^7.25.0",
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "prettier": "^2.2.1",
-    "typescript": "^4.2.4"
+    "eslint-plugin-react": "^7.24.0",
+    "jest": "^27.0.4",
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.2"
   }
 }
