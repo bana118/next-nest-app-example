@@ -1,9 +1,23 @@
 {
   "name": "project-name",
   "version": "0.0.1",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "src/*"
+    ],
+    "nohoist": [
+      "**/react-scripts",
+      "**/react-scripts/**",
+      "**/@generated",
+      "**/@generated/**"
+    ]
+  },
   "scripts": {
     "lint": "eslint src",
-    "dev": "lerna run dev --parallel --stream --scope=@monorepo/{client,server}"
+    "dev": "yarn workspaces foreach -ip run dev",
+    "cl:dev": "yarn workspace client dev",
+    "sr:dev": "yarn workspace server dev"
   },
   "license": "MIT",
   "devDependencies": {
@@ -13,7 +27,6 @@
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "lerna": "^4.0.0",
     "prettier": "^2.2.1",
     "typescript": "^4.2.4"
   }

@@ -9,4 +9,4 @@ RUN apt update \
     && apt autoremove -y \
     && apt clean -y \
     && rm -rf /var/lib/apt/lists/* \
-    && npm i -g @nestjs/cli lerna
+    && npm i -g @nestjs/cli
