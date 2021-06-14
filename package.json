@@ -14,11 +14,10 @@
     ]
   },
   "scripts": {
-    "lint": "eslint . --resolve-plugins-relative-to . --ext .jsx,.js,.tsx,.ts",
-    "cl:lint": "eslint --resolve-plugins-relative-to . --ext .jsx,.js,.tsx,.ts ./src/client",
-    "sr:lint": "eslint --resolve-plugins-relative-to . --ext .jsx.js,.tsx,.ts ./src/server",
-    "type-check": "tsc",
-    "dev": "yarn workspaces foreach -ip run dev",
+    "lint": "yarn cl:lint && yarn sr:lint",
+    "cl:lint": "eslint --ext .jsx,.js,.tsx,.ts ./src/client",
+    "sr:lint": "eslint --ext .jsx.js,.tsx,.ts ./src/server",
+    "dev": "run-p cl:dev sr:dev",
     "cl:dev": "yarn workspace client dev",
     "sr:dev": "yarn workspace server dev"
   },
@@ -31,8 +30,12 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
-    "jest": "^27.0.4",
+    "jest": "^26.6.3",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.3.1",
+    "ts-jest": "^26.5.4",
+    "ts-loader": "^8.0.18",
+    "ts-node": "^9.1.1",
     "typescript": "^4.3.2"
   }
 }
