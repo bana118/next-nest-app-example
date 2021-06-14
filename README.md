@@ -1,11 +1,10 @@
 # next-nest-app-example
 
-Next.js + Nest.js + yarn v2 のモノレポ  
-Eslint の設定がうまくできてない
+Next.js + Nest.js + Graphql のモノレポサンプル
 
 # How to get started
 
 ```
-yarn install --immutable
+yarn install --frozen-lockfile
 yarn dev
 ```
