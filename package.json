@@ -19,7 +19,7 @@
     "sr:lint": "eslint --ext .jsx.js,.tsx,.ts ./src/server",
     "dev": "run-p cl:dev sr:dev",
     "cl:dev": "yarn workspace client dev",
-    "sr:dev": "yarn workspace server dev"
+    "sr:dev": "yarn workspace server start:dev"
   },
   "license": "MIT",
   "devDependencies": {
