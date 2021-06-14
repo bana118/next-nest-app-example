@@ -8,7 +8,7 @@ import { UsersModule } from "./users/users.module";
   imports: [
     GraphQLModule.forRoot({
       playground: true,
-      autoSchemaFile: "schema.graphql",
+      autoSchemaFile: "../schema.graphql",
     }),
     UsersModule,
   ],
